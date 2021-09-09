@@ -8,23 +8,20 @@ window.addEventListener('load', function() {
 //  VARIABLES
 const gallery = document.querySelector('.gallery')
 const photos = gallery.children
-console.log(photos)
-
 const searchInput = document.querySelector('#search');
 
 //SEARCH INPUT EVENT LISTENER
 searchInput.addEventListener('keyup', e => {
-  let matches = '';
 
   for (let i = 0; i < photos.length; i++){
-
+      photos[i].style.display = 'none';
     const caption = photos[i].getAttribute('data-caption');
     if(caption.includes(e.target.value)){
-      console.log(photos[i])
-      matches += `${photos[i]}`
+      photos[i].style.display = '';
     }     
-    console.log(matches)
   }
+
+
+
   
-// gallery.innerHTML = matches
 });
