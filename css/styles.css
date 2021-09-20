@@ -4,9 +4,9 @@ body {
 
 .container {
 
-    background-color: darkseagreen;
-    border-radius: 1em;
     text-align: center;
+    max-width: 1025px;
+    margin: 0 auto;
 }
 
 #search {
